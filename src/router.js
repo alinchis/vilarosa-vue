@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
+import VRMap from './views/Map.vue'
 
 Vue.use(Router)
 
@@ -10,12 +10,25 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+      title: 'Vila Rosa Cluj-Napoca',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Vila Rosa Bed&Breakfast, Cluj-Napoca, Transilvania, România'
+        },
+        {
+          name: 'author',
+          content: 'Alin CHIS'
+        }
+      ]
+    }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/Map',
+      name: 'map',
+      component: VRMap
     }
   ]
 })
